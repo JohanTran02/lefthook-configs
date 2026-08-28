@@ -1,11 +1,6 @@
-# https://www.ultracite.ai/docs/git-hooks
-
 pre-commit:
   commands:
     lint:
-      run: npx ultracite fix --type-aware --type-check {staged_files}
+      run: npx ultracite check --type-aware --type-check {staged_files}
       glob: "**/*.{js,jsx,ts,tsx,json,jsonc,css}"
-      exclude:
-      - "*.config.js"
-      - "*.config.ts"
       stage_fixed: true
